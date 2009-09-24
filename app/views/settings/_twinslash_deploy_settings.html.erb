@@ -1,0 +1,28 @@
+<p>
+  <label>Template directory</label>
+  <%= text_field_tag 'settings[template_dir]', @settings['template_dir'] %>
+</p>
+<p>
+  <label>Create vhost command</label>
+  <%= text_field_tag 'settings[vhost_create_command]', @settings['vhost_create_command'] %>
+</p>
+<p>
+  <label>Delete vhost command</label>
+  <%= text_field_tag 'settings[vhost_delete_command]', @settings['vhost_delete_command'] %>
+</p>
+<p>
+  <label>Add user to vhost command</label>
+  <%= text_field_tag 'settings[vhost_add_user_command]', @settings['vhost_add_user_command'] %>
+</p>
+<p>
+  <label>Del user from vhost command</label>
+  <%= text_field_tag 'settings[vhost_del_user_command]', @settings['vhost_del_user_command'] %>
+</p>
+<p>
+  <label>Create hudson job command</label>
+  <%= text_field_tag 'settings[hudson_create_command]', @settings['hudson_create_command'] %>
+</p>
+<p>
+  <label>Delete hudson job command</label>
+  <%= text_field_tag 'settings[hudson_delete_command]', @settings['hudson_delete_command'] %>
+</p>

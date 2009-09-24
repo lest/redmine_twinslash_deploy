@@ -1,0 +1,6 @@
+ru:
+  field_template: Template
+
+  label_deploy: Deploy
+  label_deploy_new: New deploy
+  label_deploy_plural: Deploys

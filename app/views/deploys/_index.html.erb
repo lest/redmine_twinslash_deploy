@@ -1,0 +1,30 @@
+<% if @project.deploys.any? %>
+<table class="list">
+	<thead>
+    <th><%= l(:label_deploy) %></th>
+    <th><%= l(:field_template) %></th>
+    <th><%= l(:field_suffix) %></th>
+    <th><%= l(:field_svn_path) %></th>
+    <th style="width: 10%;"><%= l(:field_is_remote) %></th>
+    <th style="width: 10%;"/>
+    <th style="width: 10%;"/>
+  </thead>
+	<tbody>
+    <% for deploy in @project.deploys.sort { |a, b| a.name <=> b.name } %>
+      <tr class="<%= cycle 'odd', 'even' %>">
+        <td><%=h deploy.name %></td>
+        <td align="center"><%=h deploy.template %></td>
+        <td align="center"><%=h deploy.suffix %></td>
+        <td align="center"><%=h deploy.svn_path %></td>
+        <td align="center"><%= image_tag('true.png') if deploy.is_remote? %></td>
+        <td align="center"><%= link_to_if_authorized l(:button_edit), {:controller => 'deploys', :action => 'edit', :id => deploy}, :class => 'icon icon-edit' %></td>
+        <td align="center"><%= link_to_if_authorized l(:button_delete), {:controller => 'deploys', :action => 'destroy', :id => deploy}, :confirm => l(:text_are_you_sure), :method => :post, :class => 'icon icon-del' %></td>
+      </tr>
+    <% end; reset_cycle %>
+    </tbody>
+</table>
+<% else %>
+<p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>
+
+<p><%= link_to_if_authorized l(:label_deploy_new), :controller => 'deploys', :action => 'new', :id => @project %></p>

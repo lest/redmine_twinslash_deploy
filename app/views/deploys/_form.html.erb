@@ -1,0 +1,9 @@
+<%= error_messages_for :deploy %>
+
+<div class="box">
+  <p><%= f.text_field :name, :size => 60, :required => true %></p>
+  <p><%= f.select :template, deploy_template_collection_for_select, {:required => true}, :disabled => !@deploy.new_record? %></p>
+  <p><%= f.text_field :suffix, :size => 10, :disabled => !@deploy.new_record? %></p>
+  <p><%= f.text_field :svn_path, :size => 60, :disabled => !@deploy.new_record? %></p>
+  <p><%= f.check_box :is_remote, :disabled => !@deploy.new_record? %>
+</div>

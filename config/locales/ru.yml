@@ -1,0 +1,9 @@
+ru:
+  field_is_remote: Remote
+  field_svn_path: Svn path
+  field_suffix: Suffix
+  field_template: Template
+
+  label_deploy: Deploy
+  label_deploy_new: New deploy
+  label_deploy_plural: Deploys
