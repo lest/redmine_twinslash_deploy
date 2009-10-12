@@ -19,10 +19,6 @@
   <%= text_field_tag 'settings[vhost_del_user_command]', @settings['vhost_del_user_command'] %>
 </p>
 <p>
-  <label>Create hudson job command</label>
-  <%= text_field_tag 'settings[hudson_create_command]', @settings['hudson_create_command'] %>
-</p>
-<p>
-  <label>Delete hudson job command</label>
-  <%= text_field_tag 'settings[hudson_delete_command]', @settings['hudson_delete_command'] %>
+  <label>Hudson base url</label>
+  <%= text_field_tag 'settings[hudson_base_url]', @settings['hudson_base_url'] %>
 </p>
